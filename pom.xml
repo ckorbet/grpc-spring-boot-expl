@@ -9,6 +9,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>grpc-spring-boot-expl</name>
   <description>gRPC and Spring Boot 2 Example</description>
+  <packaging>jar</packaging>
   
   <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -23,6 +24,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<grpc.version>1.23.0</grpc.version>
+		<grpc-spring-boot-starter.version>3.3.0</grpc-spring-boot-starter.version>
 		<protobuf-plugin.version>0.6.1</protobuf-plugin.version>
 		<os-plugin.version>1.6.2</os-plugin.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
@@ -82,6 +84,10 @@
 		
 		<!-- gRPC deps. -->
 		<dependency>
+		    <groupId>io.github.lognet</groupId>
+		    <artifactId>grpc-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
 		    <groupId>io.grpc</groupId>
 		    <artifactId>grpc-netty</artifactId>
 		    <version>${grpc.version}</version>
@@ -95,8 +101,8 @@
 		    <groupId>io.grpc</groupId>
 		    <artifactId>grpc-stub</artifactId>
 		    <version>${grpc.version}</version>
-		</dependency>				
-				
+		</dependency>
+						
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
