@@ -6,6 +6,8 @@ import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
+import javax.annotation.Generated;
+
 import com.carlos.torres.model.impl.HelloRequest;
 import com.carlos.torres.model.impl.HelloResponse;
 import com.carlos.torres.model.impl.HelloServiceOuterClass;
@@ -23,7 +25,7 @@ import io.grpc.stub.StreamObserver;
 
 /**
  */
-@javax.annotation.Generated(
+@Generated(
     value = "by gRPC proto compiler (version 1.4.0)",
     comments = "Source: HelloService.proto")
 public final class HelloServiceGrpc {

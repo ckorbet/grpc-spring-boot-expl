@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * <p>
- * Main Spring Booot Application class for the GraphQL example
+ * Main Spring Boot 2 Application class for the gRPC example
  * </p>
  */
 @SpringBootApplication
