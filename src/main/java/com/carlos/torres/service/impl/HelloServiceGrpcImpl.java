@@ -16,7 +16,9 @@ public class HelloServiceGrpcImpl extends HelloServiceImplBase {
 	@Override
 	public final void hello(final HelloRequest request, final StreamObserver<HelloResponse> responseObserver) {
 		
-		log.info("Request received in 'hello' gRPC service...");
+		log.info(new StringBuilder("Received gRPC request with [firstName='")
+				.append(request.getFirstName())
+				.append("'] and [lastName='").append(request.getLastName()).append("']...").toString());
 
 		final HelloResponse response = 
 				HelloResponse.newBuilder()
@@ -25,10 +27,9 @@ public class HelloServiceGrpcImpl extends HelloServiceImplBase {
 						.append(request.getFirstName()).append(" ").append(request.getLastName()).toString())
 				.build();
 
-		log.info("Response served");
+		log.info("Serving gRPC response: " + response.toString());
 		
 		responseObserver.onNext(response);
 		responseObserver.onCompleted();
 	}
-
 }

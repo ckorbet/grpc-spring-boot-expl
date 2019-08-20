@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "a64d66ef-bd4e-436b-9201-2c81bdc846a9",
+		"name": "gRPCSpringBoot2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/cartorgon/hello/sync?firstName=Carlos&lastName=Torres Gonzalez",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cartorgon/hello/sync?firstName=Carlos&lastName=Torres Gonzalez",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cartorgon",
+						"hello",
+						"sync"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Carlos"
+						},
+						{
+							"key": "lastName",
+							"value": "Torres Gonzalez"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cartorgon/hello/async",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"firstName\": \"Carlos\",\n\t\t\"lastName\": \"Torres\"\n\t},\n\t{\n\t\t\"firstName\": \"Dimitri\",\n\t\t\"lastName\": \"Koklov\"\n\t},\n\t{\n\t\t\"firstName\": \"Piros\",\n\t\t\"lastName\": \"Dimas\"\n\t},\n\t{\n\t\t\"firstName\": \"Lu\",\n\t\t\"lastName\": \"Xiaojun\"\n\t},\n\t{\n\t\t\"firstName\": \"Ilya\",\n\t\t\"lastName\": \"Ilyin\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/cartorgon/hello/async",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cartorgon",
+						"hello",
+						"async"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
