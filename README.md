@@ -12,6 +12,8 @@ of [gRPC Java service](https://grpc.io/docs/quickstart/java/).
 - gRPC Spring Boot Starter 3.3.0
 - [Protocol Buffers](https://developers.google.com/protocol-buffers/) Maven plugin 0.6.1
 - [Lombok](https://projectlombok.org/) 1.18.1
+- [AssertJ](https://joel-costigliola.github.io/assertj/) 3.13.2
+- [Pragmatists/JUnitParams](https://github.com/Pragmatists/JUnitParams) 1.1.1
 
 ## References
 - [Introduction to gRPC](https://www.baeldung.com/grpc-introduction)
